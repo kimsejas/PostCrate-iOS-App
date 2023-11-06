@@ -9,6 +9,7 @@ Original App Design Project
 2. [Product Spec](#Product-Spec)
 3. [Wireframes](#Wireframes)
 4. [Schema](#Schema)
+5. [Sprint Planning and Development](#Sprint-Planning-and-Development)
 
 ## Overview
 
@@ -120,3 +121,24 @@ Category
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+##  Sprint Planning and Development
+
+## Step 1: Identify Main Features
+- User login and create account
+- Local data persistence
+- Home screen with all categories
+- Add category screen
+- Add post screen (API possibly)
+- Detailed category screen
+
+## Step 2: Breakdown into Sprints
+
+Week 8 Sprint 1: Set up the project and login/create account screen with local data persistence by Tuesday Nov 7th
+
+Week 9 Sprint 2: Build Home Screen and Add Post Screen (figure out API) by Tuesday Nov 14th
+
+Week 10 Sprint 3: Build Detailed Category Screen and Add Category Screen by Tuesday Nov 21st
+
+
+
