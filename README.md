@@ -47,12 +47,6 @@ PostCrate:
 ### 2. Screen Archetypes
 
 
-Login Screen
-- User can login
-  
-Registration Screen
-- User can create a new account
-
 Home
 - User can view categories of saved post
 - User can click category to view all saved posts in that category
@@ -80,12 +74,6 @@ Flow Navigation - This is when the user taps on something on a screen and is tak
 
 
 **Flow Navigation** (Screen to Screen)
-
-Login Screen
-- => Home
-  
-Registration Screen
-- => Home
   
 Home Screen
 - Click on category => Category
@@ -125,7 +113,6 @@ Category
 ##  Sprint Planning and Development
 
 ## Step 1: Identify Main Features
-- User login and create account
 - Local data persistence
 - Home screen with all categories
 - Add category screen
@@ -134,9 +121,9 @@ Category
 
 ## Step 2: Breakdown into Sprints
 
-Week 8 Sprint 1: Set up the project and login/create account screen with local data persistence by Tuesday Nov 7th
+Week 8 Sprint 1: Set up the data structures for post and categories begin building the view for the homescreen by Tuesday Nov 7th
 
-Week 9 Sprint 2: Build Home Screen and Add Post Screen (figure out API) by Tuesday Nov 14th
+Week 9 Sprint 2: Finish home screen and Add Post Screen (figure out API) by Tuesday Nov 14th
 
 Week 10 Sprint 3: Build Detailed Category Screen and Add Category Screen by Tuesday Nov 21st
 
