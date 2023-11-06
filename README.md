@@ -135,6 +135,9 @@ Category
 ## Step 2: Breakdown into Sprints
 
 Week 8 Sprint 1: Set up the project and login/create account screen with local data persistence by Tuesday Nov 7th
+- Achieved: Working login and registration views. Here's a video demo https://www.loom.com/share/6a09e269d16b450cba3a73d10d748d90?sid=2a401d03-d864-48af-9a88-52eb4a3bf303 
+- Challenges faced: figuring out how to have saved data for each user 
+- What's next: update the design of the screens and build homescreen with post and category objects 
 
 Week 9 Sprint 2: Build Home Screen and Add Post Screen (figure out API) by Tuesday Nov 14th
 
