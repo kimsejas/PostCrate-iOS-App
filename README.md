@@ -141,4 +141,3 @@ Week 9 Sprint 2: Build Home Screen and Add Post Screen (figure out API) by Tuesd
 Week 10 Sprint 3: Build Detailed Category Screen and Add Category Screen by Tuesday Nov 21st
 
 
-
