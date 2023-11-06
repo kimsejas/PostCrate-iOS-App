@@ -8,7 +8,30 @@
 import UIKit
 
 class RegistrationViewController: UIViewController {
+    @IBOutlet weak var instructionLabel: UILabel!
+    @IBOutlet weak var enterUsername: UITextField!
 
+    @IBOutlet weak var enterPassword: UITextField!
+    
+    @IBAction func signUpButton(_ sender: Any) {
+        
+        if (enterPassword.text != "") && (enterUsername.text != ""){
+            let status = User.registerUser(username: enterUsername.text!, password: enterPassword.text!)
+            if status == false{
+                instructionLabel.text = "Username already exists"
+            }else{
+                instructionLabel.text = "Success!"
+            }
+            
+        }else{
+            instructionLabel.text = "Please enter all fields"
+        }
+                
+        
+        
+                
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

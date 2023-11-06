@@ -8,7 +8,30 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    @IBOutlet weak var enterUsername: UITextField!
+    
+    @IBOutlet weak var enterPassword: UITextField!
+    
+    @IBOutlet weak var instructionLabel: UILabel!
+    
+    @IBAction func loginButton(_ sender: Any) {
+        
+        if (enterPassword.text != "") && (enterUsername.text != ""){
+            let status = User.loginUser(username: enterUsername.text!, password: enterPassword.text!)
+            if status == false{
+                instructionLabel.text = "Username or password incorrect."
+            }else{
+                instructionLabel.text = "Success!"
+            }
+            
+        }else{
+            instructionLabel.text = "Please enter all fields."
+        }
+        
+        
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
