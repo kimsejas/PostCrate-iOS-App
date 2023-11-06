@@ -79,6 +79,7 @@ Flow Navigation - This is when the user taps on something on a screen and is tak
 
 
 **Flow Navigation** (Screen to Screen)
+
 Login Screen
 - => Home
   
@@ -91,6 +92,9 @@ Home Screen
 - Click on Add Post (tab navigation) => Add Post
 
 Add category 
+- Click on "add" button => Home
+
+Add post 
 - Click on "add" button => Home
   
 Category
