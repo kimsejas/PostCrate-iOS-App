@@ -59,7 +59,10 @@ Home
 Category 
 - Within a category User can click on saved post to either rewatch content or be redirected to a link to rewatch content (still deciding on this one)
 
-Save 
+Add category 
+- User can create a new category 
+
+Add Post
 - User can either export from another app or insert a link to save a social media post (still deciding on this one)
 - User can select which category to put saved post in
 - User can create a new category to put saved post in 
@@ -67,20 +70,33 @@ Save
 
 ### 3. Navigation
 
-**Tab Navigation** (Tab to Screen)
+Tab Navigation - This is when the user switches between screens by simply clicking on a tab displayed at the top or bottom of the app.
+Flow Navigation - This is when the user taps on something on a screen and is taken to another screen. From that screen, they can go back to the previous screen, or navigate to another screen.
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+**Tab Navigation** (Tab to Screen)
+- Home
+- Add post
+
 
 **Flow Navigation** (Screen to Screen)
+Login Screen
+- => Home
+  
+Registration Screen
+- => Home
+  
+Home Screen
+- Click on category => Category
+- Click on create new category => Add category
+- Click on Add Post (tab navigation) => Add Post
 
-- [ ] [list first screen here]
-* [list screen navigation here]
-* ...
-- [ ] [list second screen here]
-* [list screen navigation here]
-* ...
+Add category 
+- Click on "add" button => Home
+  
+Category
+- Click on post => directs user to external app where the social media post is
+- Hold down on post => move to new category or delete saved post (pop up maybe)
+- Hold down on category name => edit category name (pop up maybe)
 
 ## Wireframes
 
