@@ -104,7 +104,9 @@ Category
 
 ## Wireframes
 
-![](AppWireframe.pdf)
+![image](https://github.com/kimsejas/ios101-milestone1/assets/109777428/856d17a0-d0bf-4e09-a02e-6e89dc821651)
+
+
 
 ### [BONUS] Digital Wireframes & Mockups
 
