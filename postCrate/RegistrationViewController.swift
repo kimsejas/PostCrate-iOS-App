@@ -21,6 +21,7 @@ class RegistrationViewController: UIViewController {
                 instructionLabel.text = "Username already exists"
             }else{
                 instructionLabel.text = "Success!"
+                self.performSegue(withIdentifier: "goToHome", sender: self)
             }
             
         }else{

@@ -22,6 +22,8 @@ class LoginViewController: UIViewController {
                 instructionLabel.text = "Username or password incorrect."
             }else{
                 instructionLabel.text = "Success!"
+                self.performSegue(withIdentifier: "goToHome", sender: self)
+                
             }
             
         }else{
