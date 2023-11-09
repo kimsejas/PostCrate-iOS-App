@@ -7,22 +7,31 @@
 
 import UIKit
 
+var categories = [Category(name: "gift ideas"),
+                  Category(name: "study hacks"),
+                  Category(name: "personal finance")]
+
 class HomeViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return categories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
 
-            // Configure the cell (i.e. update UI elements like labels, image views, etc.)
-            // Get the row where the cell will be placed using the `row` property on the passed in `indexPath` (i.e., `indexPath.row`)
-            cell.textLabel?.text = "Row \(indexPath.row)"
 
-            // Return the cell for use in the respective table view row
-            return cell
+        let category = categories[indexPath.row]
+
+        cell.label.text = category.name
+        cell.label.textColor =  UIColor.blue
+
+
+        return cell
     }
     
+    @IBAction func addCategory(_ sender: Any) {
+        
+    }
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
