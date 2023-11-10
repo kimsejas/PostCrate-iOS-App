@@ -53,6 +53,7 @@ extension User{
             if decodedUserData.user.password == password{
                 //correct password
                 print("correct user and pass✅")
+                Username.shared.username = username
                 return true
             }
             else{

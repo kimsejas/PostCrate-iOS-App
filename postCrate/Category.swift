@@ -13,3 +13,5 @@ struct Category:Codable{
     var name: String
 //    var post: Post
 }
+
+

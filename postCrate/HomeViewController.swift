@@ -7,11 +7,25 @@
 
 import UIKit
 
-var categories = [Category(name: "gift ideas"),
-                  Category(name: "study hacks"),
-                  Category(name: "personal finance")]
 
 class HomeViewController: UIViewController, UITableViewDataSource {
+    var categories = [Category]()
+
+
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var helloUsername: UILabel!
+    @IBAction func addCategory(_ sender: Any) {
+        self.performSegue(withIdentifier: "addCategories", sender: self)
+    }
+    
+    // Refresh the categories
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        refreshCategories()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
     }
@@ -23,23 +37,26 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         let category = categories[indexPath.row]
 
         cell.label.text = category.name
-        cell.label.textColor =  UIColor.blue
-
 
         return cell
     }
     
-    @IBAction func addCategory(_ sender: Any) {
-        
-    }
-    @IBOutlet weak var tableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-
-
-        // Do any additional setup after loading the view.
+        setHelloUsername()
+        
+    }
+    
+    private func setHelloUsername(){
+        helloUsername.text = "Hello " + (Username.shared.username ?? "") + " 👋"
+    }
+    
+    private func refreshCategories(){
+        self.categories = UserData.getUserdata().categories
+        tableView.reloadData()
+        print("refreshed 🛍️")
+        print(self.categories)
     }
     
 
