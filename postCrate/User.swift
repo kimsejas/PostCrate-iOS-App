@@ -42,6 +42,7 @@ extension User{
             let encodedData = try! JSONEncoder().encode(userData)
             defaults.setValue(encodedData, forKey: user.username)
             print("user created ✅")
+            Username.shared.username = username
             return true
         }
     }

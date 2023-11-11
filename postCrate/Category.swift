@@ -11,7 +11,13 @@ import Foundation
 struct Category:Codable{
     
     var name: String
-//    var post: Post
+    var posts: [Post]
+    
+    
+    init(name: String, posts: [Post] = []) {
+        self.name = name
+        self.posts = posts
+    }
 }
 
 

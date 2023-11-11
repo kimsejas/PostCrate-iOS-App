@@ -48,6 +48,18 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //pass the selected category to the detail category view
+        guard let selectedIndexPath = tableView.indexPathForSelectedRow else { return }
+
+        let selectedCategory = categories[selectedIndexPath.row]
+
+        guard let detailViewController = segue.destination as? DetailCategoryViewController else { return }
+
+        detailViewController.category = selectedCategory
+    }
+    
     private func setHelloUsername(){
         helloUsername.text = "Hello " + (Username.shared.username ?? "") + " 👋"
     }

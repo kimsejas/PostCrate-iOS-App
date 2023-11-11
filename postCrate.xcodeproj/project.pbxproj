@@ -15,6 +15,9 @@
 		4C2A61B22AF973A600CD5623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2A61B02AF973A600CD5623 /* LaunchScreen.storyboard */; };
 		4C41AAA22AFED4460095041B /* Username.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41AAA12AFED4460095041B /* Username.swift */; };
 		4C41AAA42AFEE42A0095041B /* AddCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41AAA32AFEE42A0095041B /* AddCategoriesViewController.swift */; };
+		4C41AAA62B000E910095041B /* DetailCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41AAA52B000E910095041B /* DetailCategoryViewController.swift */; };
+		4C41AAA82B0013560095041B /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41AAA72B0013560095041B /* PostTableViewCell.swift */; };
+		4C41AAAA2B001F840095041B /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41AAA92B001F840095041B /* AddPostViewController.swift */; };
 		4C61594A2AFD920D00632511 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6159492AFD920D00632511 /* Post.swift */; };
 		4C61594E2AFD941F00632511 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C61594D2AFD941F00632511 /* CategoryCell.swift */; };
 		4C8D7AA72AF9776A00A68537 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8D7AA62AF9776A00A68537 /* LoginViewController.swift */; };
@@ -36,6 +39,9 @@
 		4C2A61B32AF973A600CD5623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C41AAA12AFED4460095041B /* Username.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Username.swift; sourceTree = "<group>"; };
 		4C41AAA32AFEE42A0095041B /* AddCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoriesViewController.swift; sourceTree = "<group>"; };
+		4C41AAA52B000E910095041B /* DetailCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCategoryViewController.swift; sourceTree = "<group>"; };
+		4C41AAA72B0013560095041B /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		4C41AAA92B001F840095041B /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		4C6159492AFD920D00632511 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4C61594D2AFD941F00632511 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		4C8D7AA62AF9776A00A68537 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +66,6 @@
 		4C2A61992AF973A500CD5623 = {
 			isa = PBXGroup;
 			children = (
-				4C6159492AFD920D00632511 /* Post.swift */,
 				4C2A61A42AF973A500CD5623 /* postCrate */,
 				4C2A61A32AF973A500CD5623 /* Products */,
 			);
@@ -77,10 +82,14 @@
 		4C2A61A42AF973A500CD5623 /* postCrate */ = {
 			isa = PBXGroup;
 			children = (
+				4C41AAA52B000E910095041B /* DetailCategoryViewController.swift */,
+				4C6159492AFD920D00632511 /* Post.swift */,
 				4C2A61A52AF973A500CD5623 /* AppDelegate.swift */,
 				4C2A61A72AF973A500CD5623 /* SceneDelegate.swift */,
 				4C2A61A92AF973A500CD5623 /* ViewController.swift */,
 				4C2A61AB2AF973A500CD5623 /* Main.storyboard */,
+				4C41AAA92B001F840095041B /* AddPostViewController.swift */,
+				4C41AAA72B0013560095041B /* PostTableViewCell.swift */,
 				4C41AAA32AFEE42A0095041B /* AddCategoriesViewController.swift */,
 				4C61594D2AFD941F00632511 /* CategoryCell.swift */,
 				4C9665FC2AFB2D3600B7774F /* HomeViewController.swift */,
@@ -169,7 +178,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C8D7AA72AF9776A00A68537 /* LoginViewController.swift in Sources */,
+				4C41AAA62B000E910095041B /* DetailCategoryViewController.swift in Sources */,
+				4C41AAA82B0013560095041B /* PostTableViewCell.swift in Sources */,
 				4C41AAA22AFED4460095041B /* Username.swift in Sources */,
+				4C41AAAA2B001F840095041B /* AddPostViewController.swift in Sources */,
 				4C41AAA42AFEE42A0095041B /* AddCategoriesViewController.swift in Sources */,
 				4C2A61AA2AF973A500CD5623 /* ViewController.swift in Sources */,
 				4CF727702AF9A5E200541D77 /* UserData.swift in Sources */,

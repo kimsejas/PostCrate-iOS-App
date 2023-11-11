@@ -10,11 +10,12 @@ import UIKit
 class AddCategoriesViewController: UIViewController {
     
     @IBOutlet weak var categoryName: UITextField!
+    
     @IBAction func doneAddCategory(_ sender: Any) {
         var curUserData = UserData.getUserdata()
         curUserData.categories.append(Category(name: categoryName.text ?? ""))
         UserData.saveUserData(curUserData)
-        print("leaving done add category🎁")
+        print("added category🎁")
         print(UserData.getUserdata().categories)
 
     }
