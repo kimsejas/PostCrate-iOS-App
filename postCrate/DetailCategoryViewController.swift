@@ -22,6 +22,8 @@ class DetailCategoryViewController: UIViewController, UITableViewDataSource {
         refreshPosts()
     }
     
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
@@ -33,6 +35,11 @@ class DetailCategoryViewController: UIViewController, UITableViewDataSource {
         return cell
         
     }
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         print("selected")
+        
+    }
+
     
     
     
