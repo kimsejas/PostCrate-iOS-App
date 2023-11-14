@@ -140,6 +140,9 @@ Week 8 Sprint 1: Set up the project and login/create account screen with local d
 - What's next: update the design of the screens and build homescreen with post and category objects 
 
 Week 9 Sprint 2: Build Home Screen and Add Post Screen (figure out API) by Tuesday Nov 14th
+- Achieved: Home screen with categories and detailed category view with posts. When posts are clicked users are taken to the original social media post. Here's a demo video: https://www.loom.com/share/a74a56635ba447e2b4f48bd1da98e715?sid=20cc88af-2e77-4250-8217-86c0c51ba8a0 
+- Challenges faced: figuring out how get the cover image from a social media post link into the post table view cell.
+- What's next: getting the cover image from a post url into the app. adding functionality to delete/edit categories and delete/move posts from categories
 
 Week 10 Sprint 3: Build Detailed Category Screen and Add Category Screen by Tuesday Nov 21st
 
