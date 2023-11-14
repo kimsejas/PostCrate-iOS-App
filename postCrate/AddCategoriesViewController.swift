@@ -13,15 +13,28 @@ class AddCategoriesViewController: UIViewController {
     
     @IBAction func doneAddCategory(_ sender: Any) {
         var curUserData = UserData.getUserdata()
-        curUserData.categories.append(Category(name: categoryName.text ?? ""))
-        UserData.saveUserData(curUserData)
-        print("added category🎁")
-        print(UserData.getUserdata().categories)
+        
+        if categoryName.text != " "{
+            curUserData.categories.append(Category(name: categoryName.text ?? " "))
+            UserData.saveUserData(curUserData)
+            print("added category🎁")
+            print(UserData.getUserdata().categories)
+        }else{
+            showInvalidName()
+        }
+        
 
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    private func showInvalidName(){
+        let alert = UIAlertController(title: "Error", message: "Category name is missing.", preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
     
 

@@ -15,12 +15,22 @@ class AddPostViewController: UIViewController {
     
     @IBAction func addPostButton(_ sender: Any) {
         var curUserData = UserData.getUserdata()
-        var userCategories = UserData.getUserdata().categories
+        let userCategories = UserData.getUserdata().categories
+        if enterPostDetail.text == ""{
+            showInvalidMessage(message: "Please paste a URL.")
+
+        }
         if let selectedCategoryIndex = userCategories.firstIndex(where: {$0.name == category.name}){
-            curUserData.categories[selectedCategoryIndex].posts.append(Post(imageURL: enterPostDetail.text ?? ""))
-            UserData.saveUserData(curUserData)
-            print("added post🎁")
-            print(UserData.getUserdata().categories[selectedCategoryIndex].posts)
+            
+            if Post.isURL(url: enterPostDetail.text!){
+                curUserData.categories[selectedCategoryIndex].posts.append(Post(url: enterPostDetail.text ?? ""))
+                UserData.saveUserData(curUserData)
+                print("added post🎁")
+                print(UserData.getUserdata().categories[selectedCategoryIndex].posts)
+            }else{
+                showInvalidMessage(message: "URL is invalid, please try again.")
+            }
+            
         }
         
         
@@ -35,6 +45,17 @@ class AddPostViewController: UIViewController {
     private func setStorePostLabel(){
         storePostLabel.text = "Store your post in " + category.name + " 📥"
     }
+    
+    private func showInvalidMessage(message: String){
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
+    
+    
     
 
     /*

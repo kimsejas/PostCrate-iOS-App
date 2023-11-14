@@ -11,5 +11,16 @@ import Foundation
 
 struct Post:Codable{
     
-    var imageURL: String
+    var url: String
+}
+
+extension Post{
+    static func isURL(url: String) -> Bool{
+        let prefixToCheck = "https://"
+        if url.hasPrefix(prefixToCheck) {
+            return true
+        } else {
+            return false
+        }
+    }
 }

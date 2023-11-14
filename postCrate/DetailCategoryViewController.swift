@@ -5,9 +5,12 @@
 //  Created by Kimberly Sejas on 11/11/23.
 //
 
+
 import UIKit
 
-class DetailCategoryViewController: UIViewController, UITableViewDataSource {
+
+
+class DetailCategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var category: Category!
     
     var posts = [Post]()
@@ -29,15 +32,23 @@ class DetailCategoryViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath) as! PostTableViewCell
         let post = posts[indexPath.row]
-        cell.postLabel.text = post.imageURL
+        cell.postUrlLabel.text = post.url
         return cell
         
     }
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         print("selected")
-        
+         let post = posts[indexPath.row]
+         if let url = URL(string: post.url){
+             if UIApplication.shared.canOpenURL(url){
+                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
+             }else{
+                 // url cannot be opened
+                 showInvalidURL()
+             }
+         }
     }
 
     
@@ -52,6 +63,7 @@ class DetailCategoryViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         categoryName.text = category.name
     }
     
@@ -75,6 +87,31 @@ class DetailCategoryViewController: UIViewController, UITableViewDataSource {
             }
         }
     }
+    
+    private func showInvalidURL(){
+        let alert = UIAlertController(title: "Error", message: "URL is invalid.", preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+//    private func getInstagramPostImage(url: String){
+//        var urlMedia = url + "media?size=l"
+//        
+//        let url = URL(string: urlMedia)
+//        let task = URLSession.shared.dataTask(with: url!){ (data, resp, error) in
+//            guard let data = data else{
+//                print("data is nill")
+//                return
+//            }
+//            guard let htmlString = String(data: data, encoding: String.Encoding.utf8) else{
+//                print("cannot cast data into string")
+//                return
+//            }
+//            print(htmlString)
+//        }
+//        task.resume()
+//    }
 
     
 

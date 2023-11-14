@@ -9,7 +9,7 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var postLabel: UILabel!
+    @IBOutlet weak var postUrlLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

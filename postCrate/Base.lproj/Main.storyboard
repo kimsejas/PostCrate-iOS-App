@@ -72,13 +72,13 @@
                                 <rect key="frame" x="106" y="348" width="174" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V3c-j2-Mox">
                                 <rect key="frame" x="106" y="419" width="174" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="new-password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tro-xm-L1O">
                                 <rect key="frame" x="143" y="504" width="84" height="35"/>
@@ -132,7 +132,7 @@
                                 <rect key="frame" x="105" y="363" width="182" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QdR-8b-7cg">
                                 <rect key="frame" x="105" y="416" width="213" height="47"/>
@@ -308,27 +308,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="105" id="gMw-ku-7cr" customClass="PostTableViewCell" customModule="postCrate" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="105"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="89" id="gMw-ku-7cr" customClass="PostTableViewCell" customModule="postCrate" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gMw-ku-7cr" id="8TI-Dr-OE4">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="105"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-hc-urd">
-                                                    <rect key="frame" x="159.66666666666666" y="42" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKf-zt-e7F">
+                                                    <rect key="frame" x="158.33333333333334" y="34" width="44.333333333333343" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.1450980392" green="0.16862745100000001" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="IQa-hc-urd" firstAttribute="centerY" secondItem="8TI-Dr-OE4" secondAttribute="centerY" id="3xD-Ja-7yy"/>
-                                                <constraint firstItem="IQa-hc-urd" firstAttribute="centerX" secondItem="8TI-Dr-OE4" secondAttribute="centerX" id="ZHT-tG-xNI"/>
+                                                <constraint firstItem="XKf-zt-e7F" firstAttribute="centerX" secondItem="8TI-Dr-OE4" secondAttribute="centerX" id="2KM-y3-t8N"/>
+                                                <constraint firstItem="XKf-zt-e7F" firstAttribute="centerY" secondItem="8TI-Dr-OE4" secondAttribute="centerY" id="nYj-7G-Dr8"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="postLabel" destination="IQa-hc-urd" id="Nt8-yZ-y83"/>
+                                            <outlet property="postUrlLabel" destination="XKf-zt-e7F" id="kw4-LH-XxV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -389,7 +389,7 @@
                                 <rect key="frame" x="73" y="213" width="248" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" textContentType="url"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVZ-F7-Cuc">
                                 <rect key="frame" x="164" y="288" width="65" height="35"/>
@@ -439,7 +439,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tg4-lp-hvu"/>
+        <segue reference="pcw-m4-ZCV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="rectangle.badge.plus" catalog="system" width="128" height="97"/>
