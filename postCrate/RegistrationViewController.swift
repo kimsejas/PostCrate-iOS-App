@@ -18,13 +18,14 @@ class RegistrationViewController: UIViewController {
         if (enterPassword.text != "") && (enterUsername.text != ""){
             let status = User.registerUser(username: enterUsername.text!, password: enterPassword.text!)
             if status == false{
-                instructionLabel.text = "Username already exists"
+                showInvalidMessage(message: "Username already exists")
             }else{
                 instructionLabel.text = "Success!"
+                self.performSegue(withIdentifier: "goToHome", sender: self)
             }
             
         }else{
-            instructionLabel.text = "Please enter all fields"
+            showInvalidMessage(message: "Please enter all fields.")
         }
                 
         
@@ -36,6 +37,13 @@ class RegistrationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    private func showInvalidMessage(message: String){
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
     
 

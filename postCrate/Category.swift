@@ -10,5 +10,14 @@ import Foundation
 // categories will hold posts 
 struct Category:Codable{
     
-    var name: String 
+    var name: String
+    var posts: [Post]
+    
+    
+    init(name: String, posts: [Post] = []) {
+        self.name = name
+        self.posts = posts
+    }
 }
+
+

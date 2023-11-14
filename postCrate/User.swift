@@ -42,6 +42,7 @@ extension User{
             let encodedData = try! JSONEncoder().encode(userData)
             defaults.setValue(encodedData, forKey: user.username)
             print("user created ✅")
+            Username.shared.username = username
             return true
         }
     }
@@ -53,6 +54,7 @@ extension User{
             if decodedUserData.user.password == password{
                 //correct password
                 print("correct user and pass✅")
+                Username.shared.username = username
                 return true
             }
             else{
