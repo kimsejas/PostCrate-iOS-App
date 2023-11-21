@@ -145,7 +145,7 @@ Week 9 Sprint 2: Build Home Screen and Add Post Screen (figure out API) by Tuesd
 - What's next: getting the cover image from a post url into the app. adding functionality to delete/edit categories and delete/move posts from categories
 
 Week 10 Sprint 3: Build Detailed Category Screen and Add Category Screen by Tuesday Nov 21st
-- Achieved: Added photos to the posts view using Tumblr's API. Here's a demo video: https://www.loom.com/share/a74a56635ba447e2b4f48bd1da98e715?sid=20cc88af-2e77-4250-8217-86c0c51ba8a0 
+- Achieved: Added photos to the posts view using Tumblr's API. Here's a demo video: https://www.loom.com/share/b05d0eeaba6c465fa91e2a47ba51e384?sid=3ee162e3-549e-4342-a5f5-49ca072618d9
 - Challenges faced: Figuring out how to make an API call with the pasted URL from the user.
 - What's next: Adding APIs from other social media platforms and delete/edit categories
 
