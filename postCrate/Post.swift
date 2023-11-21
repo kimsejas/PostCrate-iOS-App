@@ -7,11 +7,27 @@
 
 import Foundation
 
-//social media post
+//tumblr post
+struct Blog: Codable{
+    let response: Response
+}
 
-struct Post:Codable{
+struct Response: Codable {
+    let posts: [Post]
+}
+
+struct Post: Codable{
+    let content: [Content]
+    let post_url: URL
+}
+
+struct Content: Codable{
+    let media: [Media]
     
-    var url: String
+}
+struct Media: Codable{
+    let url: URL
+    
 }
 
 extension Post{

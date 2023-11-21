@@ -7,6 +7,7 @@
 
 
 import UIKit
+import NukeExtensions
 
 
 
@@ -35,20 +36,26 @@ class DetailCategoryViewController: UIViewController, UITableViewDataSource, UIT
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath) as! PostTableViewCell
         let post = posts[indexPath.row]
-        cell.postUrlLabel.text = post.url
+        let imageUrl = post.content[0].media[0].url
+        NukeExtensions.loadImage(with: imageUrl, into: cell.postImage)
         return cell
         
     }
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          let post = posts[indexPath.row]
-         if let url = URL(string: post.url){
-             if UIApplication.shared.canOpenURL(url){
-                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//         if let url = URL(string: post.post_url){
+         if UIApplication.shared.canOpenURL(post.post_url){
+                 UIApplication.shared.open(post.post_url, options: [:], completionHandler: nil)
              }else{
                  // url cannot be opened
                  showInvalidURL()
              }
-         }
+//         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // Adjust this value to the desired height for your cells
+        return 152.0
     }
 
     
@@ -94,25 +101,6 @@ class DetailCategoryViewController: UIViewController, UITableViewDataSource, UIT
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
-    
-//    private func getInstagramPostImage(url: String){
-//        var urlMedia = url + "media?size=l"
-//        
-//        let url = URL(string: urlMedia)
-//        let task = URLSession.shared.dataTask(with: url!){ (data, resp, error) in
-//            guard let data = data else{
-//                print("data is nill")
-//                return
-//            }
-//            guard let htmlString = String(data: data, encoding: String.Encoding.utf8) else{
-//                print("cannot cast data into string")
-//                return
-//            }
-//            print(htmlString)
-//        }
-//        task.resume()
-//    }
-
     
 
     /*
