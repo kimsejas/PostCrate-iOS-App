@@ -1,5 +1,3 @@
-CodePath iOS 101 Course Final Project
-===
 
 # PostCrate
 
